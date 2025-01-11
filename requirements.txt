@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-moviepy.editor
+moviepy
 python-multipart
 pillow
 imageio[ffmpeg]
