@@ -1,4 +1,4 @@
-python-3.9.13
+
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import FileResponse
 import shutil
