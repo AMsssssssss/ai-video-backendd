@@ -3,7 +3,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import FileResponse
 import shutil
 import os
-import moviepy.editor as mp
+from moviepy.editor import VideoFileClip
 from moviepy.video.fx.all import crop
 
 app = FastAPI()
@@ -31,7 +31,7 @@ def crop_to_vertical(input_video, output_video):
     cropped.write_videofile(output_video, codec='libx264', audio_codec='aac')
 
 def extract_highlight(input_video, output_video):
-    video = mp.VideoFileClip(input_video)
+    video = VideoFileClip(input_video)
     highlight = video.subclip(0, min(10, video.duration))
     highlight.write_videofile(output_video, codec='libx264', audio_codec='aac')
 
