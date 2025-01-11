@@ -4,4 +4,4 @@ moviepy
 python-multipart
 pillow
 imageio[ffmpeg]
-
+use=python-3.9.13
