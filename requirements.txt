@@ -3,4 +3,4 @@ uvicorn
 moviepy
 python-multipart
 imageio[ffmpeg]
-    
+Pillow
