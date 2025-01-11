@@ -47,10 +47,3 @@ async def process_video(filename: str):
 async def download_file(filename: str):
     file_path = f"{PROCESSED_DIR}/processed_{filename}"
     return FileResponse(file_path, media_type="video/mp4", filename=f"short_{filename}")
-
-if __name__ == "__main__":
-    import uvicorn
-    import os
-    
-    port = int(os.environ.get("PORT", 8000))  # Use the port Render assigns
-    uvicorn.run("main:app", host="0.0.0.0", port=port)    
